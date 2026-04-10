@@ -4,8 +4,8 @@
 数据路径 (本地 SSD): `/home/lk/data/TumorSegmentation/`
 索引文件 (项目内): `all_entries_train.json` (3359), `all_entries_test.json` (847)
 
-> 注: 新数据目录为只读 (`dr-xr-xr-x`), 索引 JSON 文件存放在项目根目录
-> `/mnt/nas/share/home/liuke/prjs/uter/model_with_mamba/mamba_final/` 下。
+> 注: 新数据目录为只读 (`dr-xr-xr-x`)。
+> 索引 JSON 文件现作为项目根目录下的仓库文件保留，可随 clean repo / runner 一起同步。
 
 ## 整体结构
 

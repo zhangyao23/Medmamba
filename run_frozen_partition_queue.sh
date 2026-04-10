@@ -1,8 +1,15 @@
 #!/bin/bash
-set -e
-cd /mnt/nas/share/home/liuke/prjs/uter/model_with_mamba/mamba_final
+set -euo pipefail
 
-ENVPYTHON="/home/lk/.pyenv/versions/miniconda3-latest/envs/uter_mamba/bin/python"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="${SCRIPT_DIR}"
+ARTIFACT_ROOT="${ARTIFACT_ROOT:-$(cd "${REPO_ROOT}/.." && pwd)/mamba_artifacts}"
+PYTHON_BIN="${PYTHON_BIN:-/home/lk/.pyenv/versions/miniconda3-latest/envs/uter_mamba/bin/python}"
+NUM_GPUS="${NUM_GPUS:-5}"
+WAIT_PATTERN="${WAIT_PATTERN:-train_volumetric_ddp.*v20_mamba_first_weak}"
+
+cd "$REPO_ROOT"
+
 export LD_LIBRARY_PATH=/home/lk/.pyenv/versions/miniconda3-latest/envs/uter_mamba/lib/python3.11/site-packages/torch/lib:$LD_LIBRARY_PATH
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
@@ -34,15 +41,18 @@ find_free_gpus() {
 
 run_experiment() {
     local config=$1
-    local logfile=$2
-    local num_gpus=5
+    local run_name=$2
     local master_port=$3
+    local log_dir="${ARTIFACT_ROOT}/${run_name}/logs"
+    local logfile="${log_dir}/launcher.log"
+
+    mkdir -p "$log_dir"
 
     echo "=============================================="
-    echo "Waiting for $num_gpus free GPUs..."
+    echo "Waiting for $NUM_GPUS free GPUs..."
     echo "=============================================="
     while true; do
-        GPU_IDS=$(find_free_gpus $num_gpus)
+        GPU_IDS=$(find_free_gpus "$NUM_GPUS")
         if [ -n "$GPU_IDS" ]; then
             break
         fi
@@ -52,17 +62,20 @@ run_experiment() {
 
     echo "=============================================="
     echo "Starting experiment: $config"
+    echo "  Run:  $run_name"
     echo "  GPUs: $GPU_IDS"
     echo "  Log:  $logfile"
     echo "  Time: $(date)"
     echo "=============================================="
 
     export CUDA_VISIBLE_DEVICES=$GPU_IDS
-    $ENVPYTHON -m torch.distributed.run \
-        --nproc_per_node=$num_gpus \
-        --master_port=$master_port \
+    "$PYTHON_BIN" -m torch.distributed.run \
+        --nproc_per_node="$NUM_GPUS" \
+        --master_port="$master_port" \
         scripts/train_volumetric_ddp.py \
         --config "$config" \
+        --output_root "$ARTIFACT_ROOT" \
+        --run_name "$run_name" \
         > "$logfile" 2>&1
 
     echo "Experiment finished: $config (exit code: $?)"
@@ -73,7 +86,7 @@ echo "=============================================="
 echo "Waiting for current training to finish..."
 echo "=============================================="
 while true; do
-    if ! pgrep -f "train_volumetric_ddp.*v20_mamba_first_weak" > /dev/null 2>&1; then
+    if ! pgrep -f "$WAIT_PATTERN" > /dev/null 2>&1; then
         echo "$(date): Current Mamba-first training finished."
         break
     fi
@@ -84,23 +97,23 @@ done
 sleep 30
 
 echo ""
-echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
 echo ">>> Experiment 1/2: Codebook-first + Frozen Partition"
-echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
 run_experiment \
     "configs/v20_cb_first_frozen_partition.yaml" \
-    "cb_first_frozen_partition_train.log" \
+    "cb_first_frozen_partition" \
     29613
 
 sleep 30
 
 echo ""
-echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
 echo ">>> Experiment 2/2: Mamba-first + Frozen Partition"
-echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
 run_experiment \
     "configs/v20_mamba_first_frozen_partition.yaml" \
-    "mamba_first_frozen_partition_train.log" \
+    "mamba_first_frozen_partition" \
     29614
 
 echo ""

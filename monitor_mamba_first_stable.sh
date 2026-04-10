@@ -1,26 +1,37 @@
 #!/bin/bash
+set -euo pipefail
+
 # 自动监控 Mamba-first stable 训练
 # 每30分钟检查一次，如果崩溃则报告错误
 
-LOG="/mnt/nas/share/home/liuke/prjs/uter/model_with_mamba/mamba_final/mamba_first_stable_train.log"
-MONITOR_LOG="/mnt/nas/share/home/liuke/prjs/uter/model_with_mamba/mamba_final/mamba_first_stable_monitor.log"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="${SCRIPT_DIR}"
+ARTIFACT_ROOT="${ARTIFACT_ROOT:-$(cd "${REPO_ROOT}/.." && pwd)/mamba_artifacts}"
+RUN_NAME="${RUN_NAME:-mamba_first_stable}"
+PROCESS_PATTERN="${PROCESS_PATTERN:-train_mamba_first_ddp}"
+LOG_DIR="${ARTIFACT_ROOT}/${RUN_NAME}/logs"
+LOG="${LOG_DIR}/train.log"
+MONITOR_LOG="${LOG_DIR}/monitor.log"
 
+mkdir -p "$LOG_DIR"
 echo "$(date): Monitor started" >> "$MONITOR_LOG"
 
 while true; do
     sleep 1800  # 30 minutes
 
-    # Check if training process is still running
-    RUNNING=$(ps aux | grep "train_mamba_first_ddp" | grep -v grep | wc -l)
-    
-    # Get latest loss
-    LAST_LOSS=$(grep -oP 'loss=[\d.]+' "$LOG" | tail -1)
-    LAST_EPOCH=$(grep -oP 'Epoch \d+' "$LOG" | tail -1)
-    HAS_NAN=$(grep "Train Loss: nan" "$LOG" | tail -1)
-    HAS_ERROR=$(tail -20 "$LOG" | grep -iE "Error|Traceback|RuntimeError|NCCL" | head -1)
-    
+    if [ ! -f "$LOG" ]; then
+        echo "$(date '+%Y-%m-%d %H:%M:%S'): waiting for log file at $LOG" >> "$MONITOR_LOG"
+        continue
+    fi
+
+    RUNNING=$(pgrep -fc "$PROCESS_PATTERN" || true)
+    LAST_LOSS=$(grep -oP 'loss=[\d.]+' "$LOG" | tail -1 || true)
+    LAST_EPOCH=$(grep -oP 'Epoch \d+' "$LOG" | tail -1 || true)
+    HAS_NAN=$(grep "Train Loss: nan" "$LOG" | tail -1 || true)
+    HAS_ERROR=$(tail -20 "$LOG" | grep -iE "Error|Traceback|RuntimeError|NCCL" | head -1 || true)
+
     TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
-    
+
     if [ "$RUNNING" -gt 0 ] && [ -z "$HAS_NAN" ] && [ -z "$HAS_ERROR" ]; then
         echo "$TIMESTAMP: OK | $LAST_EPOCH | $LAST_LOSS | procs=$RUNNING" >> "$MONITOR_LOG"
     else
