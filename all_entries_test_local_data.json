@@ -1,0 +1,3390 @@
+[
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_078.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center2_09.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center4_22.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center2_44.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_089.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center2_17.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_109.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center2_14.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_073.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_063.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_106.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_011.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_083.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_084.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center3_03.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_074.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_052.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_064.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_085.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_026.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center2_10.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center2_16.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_103.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_101.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_096.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center4_05.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center4_11.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_112.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center2_25.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_098.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_060.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_090.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center2_02.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_021.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_015.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_092.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_097.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center3_21.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center3_01.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center3_13.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center2_31.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center4_16.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_012.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center4_13.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Bladder_Tumor_00/images/Center1_081.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_558_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_489194_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_309830_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_375455_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_982086_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/NACT_65_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_335536_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_127675_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/NACT_49_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_624777_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1030_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_896621_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_894491_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_254060_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_407_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_786753_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1173_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_369040_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_454808_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1222_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_539_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_139973_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_099_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_803514_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_474874_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_650_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_515284_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_653927_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1231_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_641246_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_329076_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_493472_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/NACT_12_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_284443_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_530_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_717_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_676365_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_851180_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_605713_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_724_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_386_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_373672_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/NACT_26_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_879224_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_188511_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_570966_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_512_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_345483_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_181442_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_218_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_808714_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_233962_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_987728_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_462581_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_539291_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_700549_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_994987_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_477994_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_519738_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/NACT_59_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_238790_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_792181_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_981664_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_001_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1169_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_221375_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_587691_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/NACT_37_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1224_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_119928_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_757_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1203_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_783427_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_775_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1015_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_701790_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_446263_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_208265_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_188700_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_685753_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_131595_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1175_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_255388_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1134_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_879_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_212307_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_622315_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_644186_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_478655_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_478484_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1069_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_677915_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_380769_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_153327_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_666450_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/NACT_61_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_539904_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_282777_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_356_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1013_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_694_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_464_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_649198_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_831702_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/NACT_58_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_203060_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_950131_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1155_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_338_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_860243_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_771151_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_303685_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_820807_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_790722_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_136536_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_706169_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_987914_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_398_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_541165_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_686_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1167_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_111646_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_357017_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_802308_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_103939_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_817_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_116165_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_986734_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_655703_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_882_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_386664_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/NACT_68_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_198891_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_753109_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_616994_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_129_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_133650_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1117_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_916645_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_097_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_180663_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_726381_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_685_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_215932_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_287961_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/NACT_62_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_974181_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_918979_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_974618_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_728182_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1179_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_115638_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_241998_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1135_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_307_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_506623_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/NACT_40_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1089_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_395_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1228_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_928446_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_378401_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_043_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/NACT_36_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_894673_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_555214_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_573919_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_211408_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_586207_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_567201_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_350_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_522140_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/NACT_63_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1096_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1233_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/NACT_07_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_427321_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_676048_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_884_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_783764_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_360937_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_280375_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_373346_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_301289_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1114_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_892390_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/NACT_20_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1040_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_411008_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_430441_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_517870_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_069_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_781642_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_824350_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_884266_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/NACT_66_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/NACT_22_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_709559_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/NACT_27_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_708387_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_749097_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_151980_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_009_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_541_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_525_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_651541_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_906042_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_453596_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_498024_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1061_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1074_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_572731_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1100_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_417654_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_178_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_885871_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_507198_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_724384_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_408_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_258_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_518000_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_592_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_355942_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_435279_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_899_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_277848_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_792412_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/NACT_14_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_632408_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/NACT_18_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_375342_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_949444_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_247641_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_166782_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_439489_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_521860_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_929980_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_311455_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1042_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_301_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_514_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_342996_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_578975_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_408692_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_064_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_640_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_192548_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1150_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_600536_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_221686_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1008_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_353318_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_613188_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_663144_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_535779_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_470_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_431061_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_568331_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_227881_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_596458_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_333_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_570685_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_306127_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_201831_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_275626_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1038_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_395379_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_641977_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_356431_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_589502_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_663197_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_402265_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_540539_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_202956_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_550421_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1012_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1191_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_799_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_845663_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1204_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1025_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_041_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_227055_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_174904_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_889049_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_117_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_021_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY1_1202_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_776_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_012_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_342959_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_376676_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_816_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_644609_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_598835_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_640463_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/DUKE_167_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_688955_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_396723_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_104268_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_935460_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Breast_Tumor_00/images/ISPY2_786003_0001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Cervix_Tumor_00/images/CCTH-A03_MR3_SAG_T2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Cervix_Tumor_00/images/CCTH-B03_MR2_SAG_T2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Cervix_Tumor_00/images/CCTH-A09_MR2_SAG_T2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Cervix_Tumor_00/images/CCTH-A06_MR2_SAG_T2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Cervix_Tumor_00/images/CCTH-B05_MR2_SAG_T2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Cervix_Tumor_00/images/CCTH-A07_MR2_SAG_T2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Cervix_Tumor_00/images/CCTH-B10_MR2_SAG_T2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Cervix_Tumor_00/images/CCTH-A05_MR1_SAG_T2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Cervix_Tumor_00/images/CCTH-A11_MR1_SAG_T2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Cervix_Tumor_00/images/CCTH-B04_MR1_SAG_T2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Cervix_Tumor_00/images/CCTH-A07_MR1_SAG_T2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Cervix_Tumor_00/images/CCTH-A02_MR1_SAG_T2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Cervix_Tumor_00/images/CCTH-A10_MR2_SAG_T2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Cervix_Tumor_00/images/CCTH-B08_MR2_SAG_T2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Colon_Tumor_00/images/FLARE23_2138.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Colon_Tumor_00/images/FLARE23_1491.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Colon_Tumor_00/images/FLARE23_0399.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Colon_Tumor_00/images/FLARE23_1712.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Colon_Tumor_00/images/FLARE23_0675.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Colon_Tumor_00/images/FLARE23_1869.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Colon_Tumor_00/images/FLARE23_1296.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Colon_Tumor_00/images/FLARE23_0114.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Colon_Tumor_00/images/FLARE23_0556.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Colon_Tumor_00/images/FLARE23_0980.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Colon_Tumor_00/images/FLARE23_2094.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Colon_Tumor_00/images/FLARE23_0552.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Colon_Tumor_00/images/FLARE23_1986.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Colon_Tumor_00/images/FLARE23_0339.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Colon_Tumor_00/images/FLARE23_0931.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Colon_Tumor_00/images/FLARE23_1985.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Colon_Tumor_00/images/FLARE23_0900.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Colon_Tumor_00/images/FLARE23_0897.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Colon_Tumor_00/images/FLARE23_0072.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Colon_Tumor_00/images/FLARE23_1142.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Colon_Tumor_00/images/FLARE23_2188.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Colon_Tumor_00/images/FLARE23_1766.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Colon_Tumor_00/images/FLARE23_1098.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Colon_Tumor_00/images/FLARE23_1015.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Colon_Tumor_00/images/FLARE23_1510.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Colon_Tumor_00/images/FLARE23_1032.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00530.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00146.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00459.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00285.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00496.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00507.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00401.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00088.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00071.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00233.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00522.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00041.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00164.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00152.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00010.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00455.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00078.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00223.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00461.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00415.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00484.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00405.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00057.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00137.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00419.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00432.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00184.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00414.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00091.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00472.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00467.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00034.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00413.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00293.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00259.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00295.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00438.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00474.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00117.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00132.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00183.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00539.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00501.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00173.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00096.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00267.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00197.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00264.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00099.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00227.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00063.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00447.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00444.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00563.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00054.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00012.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00009.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00502.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00450.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00015.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00017.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00120.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00271.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00114.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00190.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00429.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00185.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00037.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00430.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00449.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00464.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00504.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00517.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00465.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00148.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00468.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00576.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00126.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00258.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00509.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00278.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00506.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00138.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00567.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00208.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00512.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00013.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00110.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00214.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00055.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00244.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00175.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00020.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00410.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00246.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00499.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Kidney_Tumor_00/images/case_00441.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_0573.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_0493.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_1988.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_1254.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_1390.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_1825.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_1218.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_1744.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_0563.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_1835.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_1470.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_1453.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_1575.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_1495.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_0700.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_0689.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_1782.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_2078.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_1055.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_0409.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_2084.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_0467.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_0101.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_2100.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_1808.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_1408.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_2023.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_1436.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_1493.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_0098.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_1192.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_1459.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_1829.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_1195.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_0820.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_1687.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_2106.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_1854.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_0083.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_2190.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Liver_Tumor_00/images/FLARE23_1452.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_00/images/lung_092.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_00/images/lung_001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_00/images/lung_074.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_00/images/lung_065.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_00/images/lung_044.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_00/images/lung_096.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_00/images/lung_079.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_00/images/lung_004.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_00/images/lung_016.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_00/images/lung_037.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_00/images/lung_022.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_00/images/lung_018.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_00/images/lung_078.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-048_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-336_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-339_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-178_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-260_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-258_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-015_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-370_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-251_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-271_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-180_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-397_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-188_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-023_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-355_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-376_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-099_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-358_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-300_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-081_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-422_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-085_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-146_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-135_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-186_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-230_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-304_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-225_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-364_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-289_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-060_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-157_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-070_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-343_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-003_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-038_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-326_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-231_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-152_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-165_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-308_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-332_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-044_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-403_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-419_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-274_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-059_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-388_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-290_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-117_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-211_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-292_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-384_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-102_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-250_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-144_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-082_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-100_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-025_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-278_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-352_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-228_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-373_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-030_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-301_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-334_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-282_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-158_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-408_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-072_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-221_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-319_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-238_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-150_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-004_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-377_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-262_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-275_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-320_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-159_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-357_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-324_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-045_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-197_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Lung_Tumor_01/images/LUNG1-317_CT.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0945.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1108.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0161.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0219.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1973.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0499.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0504.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_2151.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1172.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1841.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1947.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0362.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1217.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1688.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1225.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1402.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0889.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1405.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0189.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1281.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1992.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1116.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1123.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1994.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1223.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1965.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0893.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0365.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0237.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1481.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0749.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1058.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_2058.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0113.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1640.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0290.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0576.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_2191.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1856.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1867.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1327.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0400.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0346.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1812.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0491.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0888.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0607.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0526.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0276.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0194.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1056.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1028.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_2161.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1683.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0067.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1607.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1722.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0026.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0598.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0805.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0084.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1639.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0285.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1356.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1054.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1821.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0935.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0064.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1236.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0511.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0901.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_2044.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0217.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_2073.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1591.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0787.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0092.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_2001.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0490.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_2061.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0070.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0565.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1603.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0969.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0203.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0957.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0272.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1213.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1034.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1897.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0135.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1632.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0859.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0635.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1695.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1029.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1827.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_1119.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0619.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Pancreas_Tumor_00/images/FLARE23_0533.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/113_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/026_adc.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/052_adc.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/085_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/038_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/091_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/094_adc.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/114_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/147_adc.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/132_adc.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/096_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/037_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/012_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/135_adc.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/076_adc.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/129_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/138_adc.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/022_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/029_adc.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/147_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/054_adc.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/013_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/143_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/020_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/107_adc.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/091_adc.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/079_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/044_adc.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/063_adc.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/142_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/010_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/118_adc.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/146_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/081_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/078_adc.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/041_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/004_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/042_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/105_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/060_adc.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/101_adc.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/157_adc.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/099_adc.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/075_adc.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/109_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/028_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/126_adc.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/002_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/152_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/043_adc.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/073_adc.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/032_adc.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/144_adc.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/008_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/128_adc.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/122_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/006_adc.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/011_adc.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/037_adc.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/021_adc.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/065_t2.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/116_adc.nii.gz",
+        "label": 0
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/111_adc.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Prostate_Tumor_00/images/090_adc.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_109_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_166_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_011_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_141_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_143_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_172_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_026_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_244_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_188_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_235_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_130_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_278_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_170_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_114_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_033_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_164_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_148_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_246_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_053_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_225_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_218_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_034_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_297_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_151_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_022_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_209_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_029_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_207_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_295_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_286_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_236_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_042_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_135_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_292_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_156_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_104_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_039_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_027_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_239_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_229_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_212_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_226_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_035_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_254_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_090_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_247_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_285_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_122_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_018_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_197_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_249_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_228_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_009_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_103_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_081_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_190_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_116_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_140_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_124_t2.nii.gz",
+        "label": 1
+    },
+    {
+        "image": "/data/TumorSegmentation/Uterus_Tumor_00/images/UMD_221129_282_t2.nii.gz",
+        "label": 1
+    }
+]

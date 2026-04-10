@@ -1,0 +1,194 @@
+data:
+  train_json: all_entries_train.json
+  test_json: all_entries_test.json
+  
+  patch_size: [16, 16, 16]
+  stride: [16, 16, 16]
+  
+  batch_size: 4
+  num_workers: 4
+  
+  min_hu: -1024.0
+  max_hu: 3071.0
+  
+  balanced_sampling: true
+  positive_ratio: 0.2
+
+model:
+  feature_extractor:
+    arch: resnet34
+    spatial_dims: 3
+    n_input_channels: 1
+    pretrained: false
+    frozen: false
+    mini_batch_size: 8
+  
+  codebook:
+    num_embeddings: 16
+    embedding_dim: 512
+    healthy_ratio: 0.75
+    commitment_cost: 0.25
+    use_ema: true
+    ema_decay: 0.95
+    revive_dead_codes: true
+    revive_min_epoch_usage: 2.0
+    revive_noise_std: 0.01
+    revive_until_epoch: 100
+    usage_balance_alpha: 0.3
+    explore_prob: 0.05
+    gate_std_factor: 3.0
+    min_cancer_fraction: 0.02
+    lambda_code_nu: 0.0
+
+  decoder:
+    enabled: true
+    hidden_dims: [512, 1024]
+  
+  spatial_scanner:
+    type: z_order
+    hilbert_max_order: 8
+  
+  self_correction:
+    enabled: true
+    entropy_threshold: 0.7
+    neighbor_radius: 2
+    spatial_weight: 0.3
+  
+  mamba:
+    d_model: 512
+    d_state: 16
+    d_conv: 4
+    expand: 2
+    num_layers: 4
+    bidirectional: true
+  
+  mil:
+    hidden_dim: 256
+    num_classes: 2
+
+  seg_head:
+    type: dual_path
+    use_multiscale: true
+
+  voxel_seg:
+    enabled: true
+    hidden_dims: [256, 128, 64]
+    decoder_type: spatial_unet
+    use_skip_connections: false
+    deep_supervision: false
+    ds_weights: [0.25, 0.25]
+    voxel_loss_type: dice
+
+training:
+  epochs: 350
+  val_freq: 6
+  seg_val_freq: 6
+  val_start_epoch: 30
+  seg_val_max_batches: 100
+  lr: 0.00003
+  weight_decay: 0.00001
+  lr_schedule:
+    - start_epoch: 1
+      end_epoch: 30
+      lr: 0.00003
+    - start_epoch: 31
+      end_epoch: 50
+      lr: 0.00002
+    - start_epoch: 51
+      end_epoch: 180
+      lr: 0.00002
+    - start_epoch: 181
+      end_epoch: 280
+      lr: 0.00001
+    - start_epoch: 281
+      end_epoch: 350
+      lr: 0.000005
+  gradient_accumulation_steps: 1
+  mixed_precision: true
+  disable_amp: false
+  
+  distributed: true
+  world_size: 8
+  backend: nccl
+  
+  clip_grad_norm: 1.0
+  
+  two_phase_training: true
+  phase1_epochs: 30
+  phase1_mode: strict_negative_warmup
+  phase1_warmup_epochs: 1
+  phase1_normal_only: false
+  phase1_normal_ratio: 0.75
+  phase2_use_dynamic_partition: true
+  phase2_freeze_healthy_dynamic: false
+  phase2_cls_ramp_epochs: 0
+  phase2_cls_start_factor: 1.0
+  phase2_encoder_freeze_epochs: 0
+  phase2_data_transition_epochs: 10
+  phase2_target_normal_ratio: 0.50
+  phase2_seg_prior_warmup_epochs: 6
+  phase2_seg_prior_start_factor: 0.10
+  healthy_code_threshold: 0.7
+  pretrain_healthy_vqvae_epochs: 3
+  pretrain_healthy_only: true
+  freeze_healthy_codes_after_pretrain: true
+  min_codes_before_freeze: 6
+  fixed_eval_threshold: 0.35
+  best_model_min_f1_fixed: 0.45
+  best_model_min_specificity: 0.25
+  best_seg_min_auc: 0.82
+  seg_thr_search_min: 0.10
+  seg_thr_search_max: 0.90
+  seg_thr_search_step: 0.02
+  seg_training_start_epoch: 50
+
+loss:
+  lambda_cls: 2.0
+  lambda_nu: 0.1
+  lambda_vq: 0.1
+  lambda_temporal: 0.1
+  lambda_entropy: 0.05
+  lambda_recon: 1.0
+  recon_in_mil_weight: 0.02
+  recon_type: l1
+  single_class_cls_weight: 0.3
+  cls_class_weights: [2.0, 1.0]
+  use_focal_cls: false
+  focal_gamma: 2.0
+  focal_alpha_pos: 0.50
+  label_smoothing: 0.1
+  nu_margin: 0.5
+  num_embeddings: 16
+  lambda_code_att: 0.0
+  code_att_cancer_weight: 1.0
+  code_att_healthy_weight: 0.01
+  lambda_seg_neg: 0.1
+  lambda_seg_pos: 0.1
+  lambda_seg_sep: 0.15
+  seg_pos_ratio_min: 0.03
+  seg_pos_ratio_max: 0.20
+  seg_sep_margin: 0.08
+  lambda_gt_code: 0.0
+  lambda_patch_seg: 0.0
+  patch_seg_pos_weight: 20.0
+  seg_loss_type: dice_bce
+  seg_dice_weight: 1.0
+  seg_bce_weight: 1.0
+  lambda_voxel_seg: 0.0
+
+checkpoint:
+  save_dir: volumetric_checkpoints_v3/
+  save_freq: 2
+  resume: null
+
+logging:
+  log_dir: volumetric_logs_v3/
+  validation_history_path: volumetric_logs_v3/validation_history.txt
+  tensorboard: true
+  print_freq: 10
+
+segmentation:
+  output_dir: volumetric_results_v3/
+  enable_rendering: true
+  enable_interpretation: true
+  generate_segmentation: true

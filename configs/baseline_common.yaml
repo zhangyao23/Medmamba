@@ -1,0 +1,59 @@
+data:
+  train_json: all_entries_train.json
+  test_json: all_entries_test.json
+  patch_size: [32, 32, 32]
+  stride: [32, 32, 32]
+  batch_size: 4
+  num_workers: 4
+  min_hu: -1024.0
+  max_hu: 3071.0
+  balanced_sampling: true
+  positive_ratio: 0.5
+  max_patches: 64
+
+model:
+  feature_extractor:
+    arch: resnet34
+    spatial_dims: 3
+    n_input_channels: 1
+    pretrained: false
+    frozen: false
+    mini_batch_size: 8
+
+training:
+  epochs: 150
+  val_freq: 6
+  seg_val_freq: 6
+  val_start_epoch: 12
+  seg_val_max_batches: 100
+  lr: 0.00003
+  weight_decay: 0.00001
+  lr_schedule:
+    - start_epoch: 1
+      end_epoch: 50
+      lr: 0.00003
+    - start_epoch: 51
+      end_epoch: 100
+      lr: 0.00002
+    - start_epoch: 101
+      end_epoch: 150
+      lr: 0.00001
+  mixed_precision: true
+  disable_amp: false
+  distributed: true
+  backend: nccl
+  fixed_eval_threshold: 0.35
+  seg_thr_search_min: 0.10
+  seg_thr_search_max: 0.90
+  seg_thr_search_step: 0.02
+
+loss:
+  cls_class_weights: [2.0, 1.0]
+  label_smoothing: 0.1
+
+checkpoint:
+  save_dir: volumetric_checkpoints_baseline/
+
+logging:
+  log_dir: volumetric_logs_baseline/
+  print_freq: 10

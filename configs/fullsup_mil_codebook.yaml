@@ -1,0 +1,74 @@
+data:
+  train_json: all_entries_train.json
+  test_json: all_entries_test.json
+  patch_size: [32, 32, 32]
+  stride: [32, 32, 32]
+  batch_size: 4
+  num_workers: 4
+  min_hu: -1024.0
+  max_hu: 3071.0
+  max_patches: 48
+  balanced_sampling: true
+  positive_ratio: 0.5
+  adaptive_norm: false
+  voxel_tolerance_threshold: 33
+
+model:
+  feature_extractor:
+    arch: resnet34
+    spatial_dims: 3
+    n_input_channels: 1
+    pretrained: false
+    frozen: false
+    mini_batch_size: 8
+  codebook:
+    embedding_dim: 512
+    num_embeddings: 64
+    commitment_cost: 0.25
+    use_ema: true
+    ema_decay: 0.99
+  spatial_scanner:
+    type: z_order
+  mamba:
+    d_model: 512
+    d_state: 16
+    d_conv: 4
+    expand: 2
+    num_layers: 4
+    bidirectional: true
+  mil:
+    hidden_dim: 256
+    num_classes: 2
+
+training:
+  epochs: 100
+  val_freq: 6
+  val_start_epoch: 6
+  lr: 0.0001
+  weight_decay: 0.00001
+  mixed_precision: true
+  lr_schedule:
+    - start_epoch: 1
+      end_epoch: 40
+      lr: 0.0001
+    - start_epoch: 41
+      end_epoch: 70
+      lr: 0.00005
+    - start_epoch: 71
+      end_epoch: 100
+      lr: 0.00002
+
+loss:
+  pos_weight: 10.0
+  lambda_cls: 1.0
+  lambda_vq: 0.1
+  lambda_code: 0.5
+  cls_class_weights: [2.0, 1.0]
+  label_smoothing: 0.0
+
+checkpoint:
+  save_dir: ckpts_fullsup_mil_codebook
+  save_freq: 6
+
+logging:
+  log_dir: logs_fullsup_mil_codebook
