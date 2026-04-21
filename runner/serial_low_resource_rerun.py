@@ -70,7 +70,7 @@ export RUNNER_ROOT="$RUNNER_ROOT"
 export ARTIFACT_ROOT="$ARTIFACT_ROOT"
 export BRANCH="$BRANCH"
 bash "$RUNNER_ROOT/runner/bootstrap_remote_runner.sh"
-git -C "$RUNNER_ROOT" rev-parse HEAD
+git -c safe.directory="$RUNNER_ROOT" -C "$RUNNER_ROOT" rev-parse HEAD
 """
     result = run_ssh(host, script, timeout=300)
     if result.returncode != 0:
@@ -149,7 +149,11 @@ def wait_for_completion(host: str, status_file: str, poll_seconds: int) -> dict[
 
 
 def latest_remote_head(host: str, runner_root: str) -> str:
-    result = run_ssh(host, f"git -C {json.dumps(runner_root)} rev-parse HEAD", timeout=120)
+    result = run_ssh(
+        host,
+        f"git -c safe.directory={json.dumps(runner_root)} -C {json.dumps(runner_root)} rev-parse HEAD",
+        timeout=120,
+    )
     if result.returncode != 0:
         raise RuntimeError(f"{host} head check failed: {result.stderr.strip() or result.stdout.strip()}")
     return result.stdout.strip().splitlines()[-1]
