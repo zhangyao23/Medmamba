@@ -20,7 +20,11 @@ from src.training import Config, attach_log_file_handler, configure_runtime_path
 from src.training.losses import CombinedLoss
 from src.models.feature_extractor_3d import VolumetricFeatureExtractor
 from src.models.vector_quantizer_3d import PartitionedVectorQuantizer
-from src.models.spatial_scanner_3d import ZOrderSpatialScanner
+from src.models.spatial_scanner_3d import (
+    ZOrderSpatialScanner,
+    reorder_sequence,
+    restore_sequence_order,
+)
 from src.models.hilbert_scanner import HilbertCurveSpatialScanner
 from src.models.video_mamba import VideoMamba3D
 from src.models.mil_head import AttentionMILHead
@@ -179,27 +183,28 @@ class Volumetric3DMIL(nn.Module):
 
         if self.codebook_after_mamba:
             sorted_features, sorted_coords, sort_perm = self.spatial_scanner(features, coords)
-            mamba_out = self.mamba(sorted_features, mask=masks)
+            sorted_masks = reorder_sequence(masks, sort_perm)
+            mamba_out = self.mamba(sorted_features, mask=sorted_masks)
+            context_orig = restore_sequence_order(mamba_out, sort_perm)
 
-            inv_perm = sort_perm.argsort(dim=1)
-            B, N, D = mamba_out.shape
-            context_orig = torch.gather(
-                mamba_out, 1,
-                inv_perm.unsqueeze(-1).expand(B, N, D)
-            )
-
-            z_e = context_orig
             context_normed = self.mamba_out_norm(context_orig)
-            quantized, codes, vq_loss = self.codebook(context_normed, labels)
-            logits, attention = self.mil_head(quantized, mask=masks)
+            z_e = context_normed
+            quantized, codes, vq_loss = self.codebook(context_normed, labels, mask=masks)
+            attention_logits = self.mil_head.compute_attention_logits(quantized, mask=masks)
+            attention = self.mil_head.normalize_attention(attention_logits, mask=masks)
+            logits = self.mil_head.classify_with_attention(quantized, attention)
 
             correction_rate = torch.tensor(0.0, device=logits.device)
             if self.use_self_correction and self.training:
                 corrected_codes, corrected_attention, correction_rate = self.self_correction(
-                    codes=codes, coords=coords, attention=attention,
-                    codebook_embeddings=self.codebook.embedding.weight, mask=masks)
+                    codes=codes,
+                    coords=coords,
+                    attention_logits=attention_logits,
+                    mask=masks,
+                )
                 codes = corrected_codes
                 attention = corrected_attention
+                logits = self.mil_head.classify_with_attention(quantized, attention)
 
             recon_patches = None
             if self.decoder_enabled:
@@ -216,31 +221,32 @@ class Volumetric3DMIL(nn.Module):
                 seg_input = context_orig.detach()
         else:
             z_e = features
-            quantized, codes, vq_loss = self.codebook(features, labels)
+            quantized, codes, vq_loss = self.codebook(features, labels, mask=masks)
 
             sorted_quantized, sorted_coords, sort_perm = self.spatial_scanner(quantized, coords)
-            context = self.mamba(sorted_quantized, mask=masks)
+            sorted_masks = reorder_sequence(masks, sort_perm)
+            context = self.mamba(sorted_quantized, mask=sorted_masks)
+            context_orig = restore_sequence_order(context, sort_perm)
 
-            logits, attention = self.mil_head(context, mask=masks)
+            attention_logits = self.mil_head.compute_attention_logits(context_orig, mask=masks)
+            attention = self.mil_head.normalize_attention(attention_logits, mask=masks)
+            logits = self.mil_head.classify_with_attention(context_orig, attention)
 
             correction_rate = torch.tensor(0.0, device=logits.device)
             if self.use_self_correction and self.training:
                 corrected_codes, corrected_attention, correction_rate = self.self_correction(
-                    codes=codes, coords=coords, attention=attention,
-                    codebook_embeddings=self.codebook.embedding.weight, mask=masks)
+                    codes=codes,
+                    coords=coords,
+                    attention_logits=attention_logits,
+                    mask=masks,
+                )
                 codes = corrected_codes
                 attention = corrected_attention
+                logits = self.mil_head.classify_with_attention(context_orig, attention)
 
             recon_patches = None
             if self.decoder_enabled:
                 recon_patches = self.decoder(quantized)
-
-            inv_perm = sort_perm.argsort(dim=1)
-            B, N, D = context.shape
-            context_orig = torch.gather(
-                context, 1,
-                inv_perm.unsqueeze(-1).expand(B, N, D)
-            )
 
             if self.seg_head_type == 'dual_path':
                 context_detached = context_orig.detach()
@@ -286,8 +292,8 @@ class Volumetric3DMIL(nn.Module):
             with torch.no_grad():
                 z_e_frozen = self.frozen_feature_extractor(patches, mini_batch_size=mini_batch_size)
 
-        distill_feat = features if (self.training and self.codebook_after_mamba) else (context_orig if self.training else None)
-        return logits, attention, vq_loss, codes, sorted_coords, correction_rate, recon_patches, distill_feat, patch_seg_logits, voxel_seg_logits, code_cls_logit, embed_sep_loss, pseudo_routing_loss, patch_cancer_logits, mil_seg_logits, z_e_frozen
+        distill_feat = features if self.training else None
+        return logits, attention, vq_loss, codes, sorted_coords, correction_rate, recon_patches, z_e, distill_feat, patch_seg_logits, voxel_seg_logits, code_cls_logit, embed_sep_loss, pseudo_routing_loss, patch_cancer_logits, mil_seg_logits, z_e_frozen
 
     def _forward_with_spatial_decoder(self, patches, mini_batch_size):
         B, N, C, D_p, H_p, W_p = patches.shape
@@ -431,7 +437,7 @@ def train_one_epoch(model, dataloader, optimizer, loss_fn, epoch, device, rank, 
                     gt_voxel_masks_tensor = torch.from_numpy(voxel_gt_np).to(device, non_blocking=True)
 
             with torch.amp.autocast('cuda', enabled=use_amp):
-                logits, attention, vq_loss, codes, sorted_coords, correction_rate, recon_patches, z_e, patch_seg_logits, voxel_seg_logits, code_cls_logit, embed_sep_loss, pseudo_routing_loss, _, mil_seg_logits, z_e_frozen = model(
+                logits, attention, vq_loss, codes, sorted_coords, correction_rate, recon_patches, z_e, distill_feat, patch_seg_logits, voxel_seg_logits, code_cls_logit, embed_sep_loss, pseudo_routing_loss, _, mil_seg_logits, z_e_frozen = model(
                     patches, coords, labels, masks, mini_batch_size=mini_batch_size
                 )
 
@@ -463,6 +469,7 @@ def train_one_epoch(model, dataloader, optimizer, loss_fn, epoch, device, rank, 
                     normal_patch_count=model_module.codebook.normal_patch_count,
                     cancer_patch_count=model_module.codebook.cancer_patch_count,
                     z_e_frozen=z_e_frozen,
+                    distill_feat=distill_feat,
                 )
 
             if use_amp:
@@ -534,7 +541,6 @@ def train_one_epoch(model, dataloader, optimizer, loss_fn, epoch, device, rank, 
                 torch.cuda.empty_cache()
             continue
 
-        del logits, attention, vq_loss, codes, sorted_coords, patches, coords, labels, masks, recon_patches, z_e, patch_seg_logits, voxel_seg_logits, gt_voxel_masks_tensor, mil_seg_logits, z_e_frozen
         torch.cuda.empty_cache()
     
     if rank == 0 and oom_skip_count > 0:
@@ -1374,7 +1380,7 @@ def main():
                         masks = batch['masks'].to(device)
 
                         with torch.amp.autocast('cuda', enabled=config.training.get('mixed_precision', False)):
-                            logits, attention_val, _, codes, _, _, recon_patches_val, _, patch_seg_logits, voxel_seg_logits_val, _, _, _, soft_cancer_logits, mil_seg_logits_val, _ = model.module(
+                            logits, attention_val, _, codes, _, _, recon_patches_val, _, _, patch_seg_logits, voxel_seg_logits_val, _, _, _, soft_cancer_logits, mil_seg_logits_val, _ = model.module(
                                 patches, coords, None, masks, mini_batch_size=mini_batch_size
                             )
 
@@ -1383,7 +1389,7 @@ def main():
                                 tta_seg_sum = patch_seg_logits.clone() if patch_seg_logits is not None else None
                                 for flip_dims in [[3], [4], [5], [3,4], [3,5], [4,5], [3,4,5]]:
                                     p_flip = torch.flip(patches, dims=flip_dims) if isinstance(patches, torch.Tensor) else patches
-                                    l_f, _, _, _, _, _, _, _, seg_f, _, _, _, _, _, _, _ = model.module(
+                                    l_f, _, _, _, _, _, _, _, _, seg_f, _, _, _, _, _, _, _ = model.module(
                                         p_flip, coords, None, masks, mini_batch_size=mini_batch_size
                                     )
                                     tta_logits_sum = tta_logits_sum + l_f

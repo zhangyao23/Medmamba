@@ -16,7 +16,11 @@ from sklearn.metrics import roc_auc_score, f1_score, accuracy_score
 from src.training import Config
 from src.data.volumetric_loader import create_volumetric_dataloader
 from src.models.feature_extractor_3d import VolumetricFeatureExtractor
-from src.models.spatial_scanner_3d import ZOrderSpatialScanner
+from src.models.spatial_scanner_3d import (
+    ZOrderSpatialScanner,
+    reorder_sequence,
+    restore_sequence_order,
+)
 from src.models.video_mamba import VideoMamba3D
 from src.models.codebook import VectorQuantizer3D
 from src.models.mil_head import AttentionMILHead
@@ -82,12 +86,9 @@ class FullSupMILCodebookModel(nn.Module):
         quantized, code_indices, vq_loss = self.codebook(features)
         code_logits = self.code_classifier(quantized).squeeze(-1)
         sorted_features, sorted_coords, sort_perm = self.spatial_scanner(quantized, coords)
-        context = self.mamba(sorted_features, mask=masks)
-        inv_perm = sort_perm.argsort(dim=1)
-        B, N, D = context.shape
-        context_orig = torch.gather(
-            context, 1, inv_perm.unsqueeze(-1).expand(B, N, D)
-        )
+        sorted_masks = reorder_sequence(masks, sort_perm)
+        context = self.mamba(sorted_features, mask=sorted_masks)
+        context_orig = restore_sequence_order(context, sort_perm)
         seg_logits = self.seg_head(context_orig).squeeze(-1)
         mil_logits, attention = self.mil_head(context_orig, mask=masks)
         return seg_logits, mil_logits, attention, vq_loss, code_logits

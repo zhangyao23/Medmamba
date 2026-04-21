@@ -1,12 +1,11 @@
 import json
 import logging
-from typing import Dict, List, Optional, Tuple
+from typing import Callable, Dict, List, Optional, Tuple
 
 import torch
 from torch.utils.data import Dataset
 import nibabel as nib
 import numpy as np
-from monai.transforms import Compose
 
 
 CT_ORGAN_WINDOWS = {
@@ -31,9 +30,21 @@ def _detect_organ(volume_path: str) -> str:
 def _normalize_volume(volume: np.ndarray, volume_path: str,
                       min_hu: float, max_hu: float,
                       adaptive_norm: bool = True) -> np.ndarray:
+    volume = np.asarray(volume, dtype=np.float32)
+    volume = np.nan_to_num(
+        volume,
+        nan=0.0,
+        posinf=max_hu,
+        neginf=min_hu,
+    )
+
+    def _minmax_scale(arr: np.ndarray, low: float, high: float) -> np.ndarray:
+        arr = np.clip(arr, low, high)
+        denom = max(high - low, 1e-6)
+        return ((arr - low) / denom).astype(np.float32, copy=False)
+
     if not adaptive_norm:
-        volume = np.clip(volume, min_hu, max_hu)
-        return (volume - min_hu) / (max_hu - min_hu)
+        return _minmax_scale(volume, min_hu, max_hu)
 
     organ = _detect_organ(volume_path)
 
@@ -42,16 +53,25 @@ def _normalize_volume(volume: np.ndarray, volume_path: str,
         p_high = np.percentile(volume, 99.5)
         if p_high - p_low < 1e-6:
             p_high = p_low + 1.0
-        volume = np.clip(volume, p_low, p_high)
-        return (volume - p_low) / (p_high - p_low)
+        return _minmax_scale(volume, float(p_low), float(p_high))
 
     if organ in CT_ORGAN_WINDOWS:
         win_min, win_max = CT_ORGAN_WINDOWS[organ]
     else:
         win_min, win_max = min_hu, max_hu
 
-    volume = np.clip(volume, win_min, win_max)
-    return (volume - win_min) / (win_max - win_min)
+    return _minmax_scale(volume, float(win_min), float(win_max))
+
+
+def compute_axis_starts(size: int, patch: int, stride: int) -> List[int]:
+    if size <= patch:
+        return [0]
+
+    starts = list(range(0, max(1, size - patch + 1), stride))
+    tail_start = size - patch
+    if starts[-1] != tail_start:
+        starts.append(tail_start)
+    return starts
 
 
 class VolumetricMILDataset(Dataset):
@@ -60,7 +80,7 @@ class VolumetricMILDataset(Dataset):
         json_path: str,
         patch_size: Tuple[int, int, int] = (32, 32, 32),
         stride: Tuple[int, int, int] = (16, 16, 16),
-        transform: Optional[Compose] = None,
+        transform: Optional[Callable[[torch.Tensor], torch.Tensor]] = None,
         min_hu: float = -1024.0,
         max_hu: float = 3071.0,
         max_patches: int = 128,
@@ -143,7 +163,13 @@ class VolumetricMILDataset(Dataset):
             patches_tensor, flip_flags = self._augment_patches(patches_tensor)
 
         patches_tensor = patches_tensor.unsqueeze(1)
-        
+        if self.transform is not None:
+            patches_tensor = self.transform(patches_tensor)
+            if not torch.is_tensor(patches_tensor):
+                patches_tensor = torch.as_tensor(patches_tensor)
+            patches_tensor = patches_tensor.float()
+        patches_tensor = patches_tensor.contiguous()
+
         coords_tensor = torch.tensor(coords, dtype=torch.long)
         
         return {
@@ -187,16 +213,20 @@ class VolumetricMILDataset(Dataset):
         
         patches = []
         coords = []
-        
-        for z in range(0, max(1, D - patch_d + 1), stride_d):
+
+        z_starts = compute_axis_starts(D, patch_d, stride_d)
+        y_starts = compute_axis_starts(H, patch_h, stride_h)
+        x_starts = compute_axis_starts(W, patch_w, stride_w)
+
+        for z in z_starts:
             z_end = min(z + patch_d, D)
             z_start = max(0, z_end - patch_d)
-            
-            for y in range(0, max(1, H - patch_h + 1), stride_h):
+
+            for y in y_starts:
                 y_end = min(y + patch_h, H)
                 y_start = max(0, y_end - patch_h)
-                
-                for x in range(0, max(1, W - patch_w + 1), stride_w):
+
+                for x in x_starts:
                     x_end = min(x + patch_w, W)
                     x_start = max(0, x_end - patch_w)
                     
@@ -211,5 +241,5 @@ class VolumetricMILDataset(Dataset):
                     
                     patches.append(patch)
                     coords.append((z_start, y_start, x_start))
-        
+
         return patches, coords

@@ -298,6 +298,7 @@ def main():
         is_phase1=False,
         min_hu=config.data['min_hu'],
         max_hu=config.data['max_hu'],
+        adaptive_norm=config.data.get('adaptive_norm', True),
         augment=True
     )
 
@@ -312,7 +313,8 @@ def main():
         max_patches=config.data.get('max_patches', 64),
         use_ddp=False,
         min_hu=config.data['min_hu'],
-        max_hu=config.data['max_hu']
+        max_hu=config.data['max_hu'],
+        adaptive_norm=config.data.get('adaptive_norm', True),
     )
 
     model = BaselineMILModel(config, aggregation_method=agg).to(device)

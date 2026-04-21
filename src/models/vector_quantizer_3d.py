@@ -98,11 +98,13 @@ class PartitionedVectorQuantizer(nn.Module):
     def forward(
         self,
         z: torch.Tensor,
-        labels: Optional[torch.Tensor] = None
+        labels: Optional[torch.Tensor] = None,
+        mask: Optional[torch.Tensor] = None,
     ) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
         B, N, D = z.shape
         z_flat = z.reshape(-1, D)
         has_labels = labels is not None
+        valid_flat = mask.reshape(-1).bool() if mask is not None else None
         
         encoding_indices = torch.zeros(B * N, dtype=torch.long, device=z.device)
         
@@ -112,20 +114,27 @@ class PartitionedVectorQuantizer(nn.Module):
             end_idx = (b + 1) * N
             
             z_sample = z_flat[start_idx:end_idx]
+            valid_b = mask[b].bool() if mask is not None else None
+            if valid_b is not None:
+                if not valid_b.any():
+                    continue
+                z_assign = z_sample[valid_b]
+            else:
+                z_assign = z_sample
             
             if not self.phase1_complete:
-                distances = torch.cdist(z_sample, self.embedding.weight)
+                distances = torch.cdist(z_assign, self.embedding.weight)
                 if self.training and self.usage_balance_alpha > 0:
-                    usage = self.epoch_code_usage.to(z_sample.device)
+                    usage = self.epoch_code_usage.to(z_assign.device)
                     usage_norm = usage / (usage.max() + 1e-6)
                     distances = distances + self.usage_balance_alpha * usage_norm.unsqueeze(0)
                 indices = distances.argmin(dim=1)
 
                 if self.training and has_labels and label == 0:
                     assigned_features = self.embedding.weight[indices]
-                    patch_dists = (z_sample - assigned_features).norm(dim=1)
+                    patch_dists = (z_assign - assigned_features).norm(dim=1)
                     batch_mean = patch_dists.mean().detach()
-                    batch_var = patch_dists.var().detach()
+                    batch_var = patch_dists.var(unbiased=False).detach()
                     n = float(patch_dists.numel())
                     old_count = self._healthy_dist_count.item()
                     new_count = old_count + n
@@ -138,25 +147,25 @@ class PartitionedVectorQuantizer(nn.Module):
                         self._healthy_dist_count.fill_(new_count)
 
             elif self.use_dynamic_partition:
-                distances = torch.cdist(z_sample, self.embedding.weight)
+                distances = torch.cdist(z_assign, self.embedding.weight)
                 if self.training and self.usage_balance_alpha > 0:
-                    usage = self.epoch_code_usage.to(z_sample.device)
+                    usage = self.epoch_code_usage.to(z_assign.device)
                     usage_norm = usage / (usage.max() + 1e-6)
                     distances = distances + self.usage_balance_alpha * usage_norm.unsqueeze(0)
                 indices = distances.argmin(dim=1)
             else:
                 if has_labels and label == 0:
                     codebook_subset = self.embedding.weight[:self.num_healthy_codes]
-                    distances = torch.cdist(z_sample, codebook_subset)
+                    distances = torch.cdist(z_assign, codebook_subset)
                     if self.training and self.usage_balance_alpha > 0:
-                        usage = self.epoch_code_usage[:self.num_healthy_codes].to(z_sample.device)
+                        usage = self.epoch_code_usage[:self.num_healthy_codes].to(z_assign.device)
                         usage_norm = usage / (usage.max() + 1e-6)
                         distances = distances + self.usage_balance_alpha * usage_norm.unsqueeze(0)
                     indices = distances.argmin(dim=1)
                 else:
-                    distances = torch.cdist(z_sample, self.embedding.weight)
+                    distances = torch.cdist(z_assign, self.embedding.weight)
                     if self.training and self.usage_balance_alpha > 0:
-                        usage = self.epoch_code_usage.to(z_sample.device)
+                        usage = self.epoch_code_usage.to(z_assign.device)
                         usage_norm = usage / (usage.max() + 1e-6)
                         distances = distances + self.usage_balance_alpha * usage_norm.unsqueeze(0)
                     indices = distances.argmin(dim=1)
@@ -177,23 +186,50 @@ class PartitionedVectorQuantizer(nn.Module):
                         random_indices = torch.randint(0, self.num_embeddings, (indices.numel(),), device=indices.device)
                         indices = torch.where(explore_mask, random_indices, indices)
             
-            encoding_indices[start_idx:end_idx] = indices
+            if valid_b is not None:
+                sample_indices = encoding_indices[start_idx:end_idx]
+                sample_indices[valid_b] = indices
+                encoding_indices[start_idx:end_idx] = sample_indices
+            else:
+                encoding_indices[start_idx:end_idx] = indices
         
         quantized = self.embedding(encoding_indices)
         
         if self.training:
-            if self.use_ema:
-                if not self.ema_frozen:
-                    self._ema_update(z_flat, encoding_indices)
-                vq_loss = self.commitment_cost * F.mse_loss(quantized.detach(), z_flat)
+            if valid_flat is None:
+                z_for_stats = z_flat
+                quantized_for_loss = quantized
+                encoding_indices_for_stats = encoding_indices
+            elif valid_flat.any():
+                z_for_stats = z_flat[valid_flat]
+                quantized_for_loss = quantized[valid_flat]
+                encoding_indices_for_stats = encoding_indices[valid_flat]
             else:
-                e_latent_loss = F.mse_loss(quantized.detach(), z_flat)
-                q_latent_loss = F.mse_loss(quantized, z_flat.detach())
-                vq_loss = q_latent_loss + self.commitment_cost * e_latent_loss
+                z_for_stats = z_flat.new_zeros((0, D))
+                quantized_for_loss = quantized.new_zeros((0, D))
+                encoding_indices_for_stats = encoding_indices.new_zeros((0,), dtype=encoding_indices.dtype)
+
+            if self.use_ema:
+                if not self.ema_frozen and encoding_indices_for_stats.numel() > 0:
+                    self._ema_update(z_for_stats, encoding_indices_for_stats)
+                if quantized_for_loss.numel() > 0:
+                    vq_loss = self.commitment_cost * F.mse_loss(
+                        quantized_for_loss.detach(), z_for_stats
+                    )
+                else:
+                    vq_loss = torch.tensor(0.0, device=z.device)
+            else:
+                if quantized_for_loss.numel() > 0:
+                    e_latent_loss = F.mse_loss(quantized_for_loss.detach(), z_for_stats)
+                    q_latent_loss = F.mse_loss(quantized_for_loss, z_for_stats.detach())
+                    vq_loss = q_latent_loss + self.commitment_cost * e_latent_loss
+                else:
+                    vq_loss = torch.tensor(0.0, device=z.device)
             
-            unique_indices = encoding_indices.unique().detach()
-            self.code_usage_count[unique_indices] += 1
-            self.epoch_code_usage[unique_indices] += 1
+            if encoding_indices_for_stats.numel() > 0:
+                unique_indices = encoding_indices_for_stats.unique().detach()
+                self.code_usage_count[unique_indices] += 1
+                self.epoch_code_usage[unique_indices] += 1
             
             if has_labels:
                 for b in range(B):
@@ -201,6 +237,11 @@ class PartitionedVectorQuantizer(nn.Module):
                     start_idx = b * N
                     end_idx = (b + 1) * N
                     sample_codes = encoding_indices[start_idx:end_idx].detach()
+                    if mask is not None:
+                        valid_b = mask[b].bool()
+                        sample_codes = sample_codes[valid_b]
+                    if sample_codes.numel() == 0:
+                        continue
                     sample_indices = sample_codes.unique()
                     
                     if label == 0:
@@ -220,6 +261,8 @@ class PartitionedVectorQuantizer(nn.Module):
             vq_loss = torch.tensor(0.0, device=z.device)
         
         quantized = z_flat + (quantized - z_flat).detach()
+        if valid_flat is not None:
+            quantized = quantized * valid_flat.unsqueeze(-1).float()
         
         quantized = quantized.view(B, N, D)
         encoding_indices = encoding_indices.view(B, N)

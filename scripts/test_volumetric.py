@@ -7,7 +7,11 @@ import logging
 from src.data.volumetric_loader import create_volumetric_dataloader
 from src.models.feature_extractor_3d import VolumetricFeatureExtractor
 from src.models.vector_quantizer_3d import PartitionedVectorQuantizer
-from src.models.spatial_scanner_3d import ZOrderSpatialScanner
+from src.models.spatial_scanner_3d import (
+    ZOrderSpatialScanner,
+    reorder_sequence,
+    restore_sequence_order,
+)
 from src.models.video_mamba import VideoMamba3D
 from src.models.mil_head import AttentionMILHead
 from src.training import Config
@@ -31,7 +35,10 @@ def test_data_loading():
             stride=tuple(config.data['stride']),
             num_workers=0,
             shuffle=False,
-            balanced_sampling=False
+            balanced_sampling=False,
+            min_hu=config.data['min_hu'],
+            max_hu=config.data['max_hu'],
+            adaptive_norm=config.data.get('adaptive_norm', True),
         )
         
         logger.info(f"Dataloader created successfully")
@@ -115,7 +122,10 @@ def test_model_forward():
             stride=(32, 32, 32),
             num_workers=0,
             shuffle=False,
-            balanced_sampling=False
+            balanced_sampling=False,
+            min_hu=config.data['min_hu'],
+            max_hu=config.data['max_hu'],
+            adaptive_norm=config.data.get('adaptive_norm', True),
         )
         
         batch = next(iter(dataloader))
@@ -137,21 +147,23 @@ def test_model_forward():
         logger.info(f"     Features: {features.shape}")
         
         logger.info("  2. Vector quantization...")
-        quantized, codes, vq_loss = codebook(features, labels)
+        quantized, codes, vq_loss = codebook(features, labels, mask=masks)
         logger.info(f"     Quantized: {quantized.shape}")
         logger.info(f"     Codes: {codes.shape}")
         logger.info(f"     VQ Loss: {vq_loss.item():.6f}")
         
         logger.info("  3. Spatial scanning...")
-        sorted_features, sorted_coords, _ = scanner(quantized, coords)
+        sorted_features, sorted_coords, sort_perm = scanner(quantized, coords)
         logger.info(f"     Sorted features: {sorted_features.shape}")
         
         logger.info("  4. Mamba...")
-        context = mamba(sorted_features, mask=masks)
-        logger.info(f"     Context: {context.shape}")
+        sorted_masks = reorder_sequence(masks, sort_perm)
+        context = mamba(sorted_features, mask=sorted_masks)
+        context_orig = restore_sequence_order(context, sort_perm)
+        logger.info(f"     Context: {context_orig.shape}")
         
         logger.info("  5. MIL head...")
-        logits, attention = mil_head(context, mask=masks)
+        logits, attention = mil_head(context_orig, mask=masks)
         logger.info(f"     Logits: {logits.shape}")
         logger.info(f"     Attention: {attention.shape}")
         

@@ -1,6 +1,36 @@
 import torch
 import torch.nn as nn
-from typing import Tuple
+from typing import Optional, Tuple
+
+
+def invert_permutation(sort_perm: torch.Tensor) -> torch.Tensor:
+    return sort_perm.argsort(dim=1)
+
+
+def reorder_sequence(
+    sequence: Optional[torch.Tensor],
+    sort_perm: torch.Tensor
+) -> Optional[torch.Tensor]:
+    if sequence is None:
+        return None
+
+    if sequence.dim() < 2:
+        raise ValueError("sequence must have at least 2 dimensions")
+
+    index = sort_perm
+    while index.dim() < sequence.dim():
+        index = index.unsqueeze(-1)
+    index = index.expand_as(sequence)
+    return torch.gather(sequence, 1, index)
+
+
+def restore_sequence_order(
+    sequence: Optional[torch.Tensor],
+    sort_perm: torch.Tensor
+) -> Optional[torch.Tensor]:
+    if sequence is None:
+        return None
+    return reorder_sequence(sequence, invert_permutation(sort_perm))
 
 
 class ZOrderSpatialScanner(nn.Module):

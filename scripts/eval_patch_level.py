@@ -48,7 +48,11 @@ class BaselineMILModel(torch.nn.Module):
 
 def build_v20_model(config, ckpt_state_dict=None):
     from src.models.vector_quantizer_3d import PartitionedVectorQuantizer
-    from src.models.spatial_scanner_3d import ZOrderSpatialScanner
+    from src.models.spatial_scanner_3d import (
+        ZOrderSpatialScanner,
+        reorder_sequence,
+        restore_sequence_order,
+    )
     from src.models.hilbert_scanner import HilbertCurveSpatialScanner
     from src.models.video_mamba import VideoMamba3D
     from src.models.mil_head import AttentionMILHead
@@ -170,18 +174,18 @@ def build_v20_model(config, ckpt_state_dict=None):
 
             if self.codebook_after_mamba:
                 sorted_features, sorted_coords, sort_perm = self.spatial_scanner(features, coords)
-                mamba_out = self.mamba(sorted_features, mask=masks)
-                inv_perm = sort_perm.argsort(dim=1)
-                context_orig = torch.gather(mamba_out, 1, inv_perm.unsqueeze(-1).expand(B, N, D))
-                quantized, codes, vq_loss = self.codebook(context_orig, None)
+                sorted_masks = reorder_sequence(masks, sort_perm)
+                mamba_out = self.mamba(sorted_features, mask=sorted_masks)
+                context_orig = restore_sequence_order(mamba_out, sort_perm)
+                quantized, codes, vq_loss = self.codebook(context_orig, None, mask=masks)
                 logits, attention = self.mil_head(quantized, mask=masks)
             else:
-                quantized, codes, vq_loss = self.codebook(features, None)
+                quantized, codes, vq_loss = self.codebook(features, None, mask=masks)
                 sorted_quantized, sorted_coords, sort_perm = self.spatial_scanner(quantized, coords)
-                context = self.mamba(sorted_quantized, mask=masks)
-                logits, attention = self.mil_head(context, mask=masks)
-                inv_perm = sort_perm.argsort(dim=1)
-                context_orig = torch.gather(context, 1, inv_perm.unsqueeze(-1).expand(B, N, D))
+                sorted_masks = reorder_sequence(masks, sort_perm)
+                context = self.mamba(sorted_quantized, mask=sorted_masks)
+                context_orig = restore_sequence_order(context, sort_perm)
+                logits, attention = self.mil_head(context_orig, mask=masks)
 
             if self.seg_head_type == 'dual_path':
                 context_detached = context_orig.detach()
@@ -367,7 +371,8 @@ def main():
         max_patches=config.data.get('max_patches', 64),
         use_ddp=False,
         min_hu=config.data['min_hu'],
-        max_hu=config.data['max_hu']
+        max_hu=config.data['max_hu'],
+        adaptive_norm=config.data.get('adaptive_norm', True),
     )
 
     if is_v20:

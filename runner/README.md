@@ -1,5 +1,36 @@
 # runner
 
+## 2026-04 低资源重跑补充
+
+当前远程 clean runner 的标准目录仍然是：
+
+```text
+/mnt/nas/share/home/liuke/prjs/uter/model_with_mamba/
+├─ mamba_final/        # 历史快照，不再作为主执行目录
+├─ mamba_runner/       # Git checkout，专门负责训练执行
+└─ mamba_artifacts/    # logs / checkpoints / results
+```
+
+新增工具：
+
+- `host_preflight.sh`
+  - 在远程主机上检查 Git、Python、torch.distributed、`nvidia-smi`、JSON 索引和样本路径是否可用
+  - 输出 JSON，包含空闲 GPU 列表和关键环境信息
+- `render_resolved_config.py`
+  - 根据 base config 生成派生配置副本
+  - 支持 `--set dotted.path=value` 形式的覆盖
+- `launch_remote_experiment.sh`
+  - 在远程 `mamba_runner` 中启动单个实验
+  - 自动把派生配置写到 `<ARTIFACT_ROOT>/_resolved_configs/`
+  - 把运行元数据和状态写到对应 run 的 `logs/`
+- `serial_low_resource_rerun.py`
+  - 本地调度脚本
+  - 会在 `8-228 / 8-232 / 8-238 / 8-240` 之间挑选可用机器
+  - 按“先 smoke 再 full、实验严格串行”的顺序启动 `fullsup_seg`、`v20_retrain`、`v20_mamba_first_weak`
+- `start_low_resource_serial_rerun.ps1`
+  - Windows 侧后台包装脚本
+  - 用本地 Python 启动 `serial_low_resource_rerun.py`，并把本地调度日志写到 `.runtime/low_resource_rerun/`
+
 这个目录用于放置远程 clean runner 的初始化说明。
 
 推荐的远程布局：

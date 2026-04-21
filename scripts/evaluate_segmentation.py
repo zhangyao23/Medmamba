@@ -16,12 +16,17 @@ from matplotlib.colors import ListedColormap
 from src.training import Config
 from src.models.feature_extractor_3d import VolumetricFeatureExtractor
 from src.models.vector_quantizer_3d import PartitionedVectorQuantizer
-from src.models.spatial_scanner_3d import ZOrderSpatialScanner
+from src.models.spatial_scanner_3d import (
+    ZOrderSpatialScanner,
+    reorder_sequence,
+    restore_sequence_order,
+)
 from src.models.hilbert_scanner import HilbertCurveSpatialScanner
 from src.models.video_mamba import VideoMamba3D
 from src.models.mil_head import AttentionMILHead
 from src.models.self_correction import SelfCorrectionModule
 from src.models.decoder_3d import VolumetricDecoder3D
+from src.data.volumetric_dataset import compute_axis_starts
 
 
 class Volumetric3DMIL(torch.nn.Module):
@@ -87,10 +92,12 @@ class Volumetric3DMIL(torch.nn.Module):
 
     def forward(self, patches, coords, labels=None, masks=None, mini_batch_size=8):
         features = self.feature_extractor(patches, mini_batch_size=mini_batch_size)
-        quantized, codes, vq_loss = self.codebook(features, labels)
-        sorted_features, sorted_coords, _ = self.spatial_scanner(quantized, coords)
-        context = self.mamba(sorted_features, mask=masks)
-        logits, attention = self.mil_head(context, mask=masks)
+        quantized, codes, vq_loss = self.codebook(features, labels, mask=masks)
+        sorted_features, sorted_coords, sort_perm = self.spatial_scanner(quantized, coords)
+        sorted_masks = reorder_sequence(masks, sort_perm)
+        context = self.mamba(sorted_features, mask=sorted_masks)
+        context_orig = restore_sequence_order(context, sort_perm)
+        logits, attention = self.mil_head(context_orig, mask=masks)
         return logits, attention, codes, quantized
 
 
@@ -226,13 +233,16 @@ def extract_patches(volume, patch_size=(32, 32, 32), stride=(32, 32, 32), max_pa
     stride_d, stride_h, stride_w = stride
     patches = []
     coords = []
-    for z in range(0, max(1, D - patch_d + 1), stride_d):
+    z_starts = compute_axis_starts(D, patch_d, stride_d)
+    y_starts = compute_axis_starts(H, patch_h, stride_h)
+    x_starts = compute_axis_starts(W, patch_w, stride_w)
+    for z in z_starts:
         z_end = min(z + patch_d, D)
         z_start = max(0, z_end - patch_d)
-        for y in range(0, max(1, H - patch_h + 1), stride_h):
+        for y in y_starts:
             y_end = min(y + patch_h, H)
             y_start = max(0, y_end - patch_h)
-            for x in range(0, max(1, W - patch_w + 1), stride_w):
+            for x in x_starts:
                 x_end = min(x + patch_w, W)
                 x_start = max(0, x_end - patch_w)
                 patch = volume[y_start:y_end, x_start:x_end, z_start:z_end]
@@ -448,6 +458,7 @@ def main():
     max_patches = args.max_patches
     min_hu = config.data['min_hu']
     max_hu = config.data['max_hu']
+    adaptive_norm = config.data.get('adaptive_norm', True)
     mini_batch_size = config.model['feature_extractor'].get('mini_batch_size', 8)
 
     global_code_counts = np.zeros(num_embeddings, dtype=np.int64)
@@ -461,7 +472,7 @@ def main():
                       '/' + os.path.splitext(os.path.basename(volume_path))[0]
         print(f"\n[{idx+1}/{len(entries)}] {sample_name} (label={label})")
 
-        volume, volume_raw = load_volume(volume_path, min_hu, max_hu)
+        volume, volume_raw = load_volume(volume_path, min_hu, max_hu, adaptive_norm=adaptive_norm)
         H, W, D = volume.shape
         patches_list, coords_list = extract_patches(volume, patch_size, stride, max_patches)
         n_patches = len(patches_list)

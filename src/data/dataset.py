@@ -1,19 +1,18 @@
 import json
 import logging
-from typing import Dict, List, Optional, Tuple
+from typing import Callable, Dict, List, Optional, Tuple
 
 import torch
 from torch.utils.data import Dataset
 import nibabel as nib
 import numpy as np
-from monai.transforms import Compose
 
 
 class Volume3DMILDataset(Dataset):
     def __init__(
         self,
         json_path: str,
-        transform: Optional[Compose] = None,
+        transform: Optional[Callable[[torch.Tensor], torch.Tensor]] = None,
         max_slices: int = 64,
         skip_empty_slices: bool = True,
         empty_threshold: float = 100.0,

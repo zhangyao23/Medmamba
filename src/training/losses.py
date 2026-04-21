@@ -686,6 +686,7 @@ class CombinedLoss(nn.Module):
         normal_patch_count: Optional[torch.Tensor] = None,
         cancer_patch_count: Optional[torch.Tensor] = None,
         z_e_frozen: Optional[torch.Tensor] = None,
+        distill_feat: Optional[torch.Tensor] = None,
     ) -> Tuple[torch.Tensor, Dict]:
         cls_weights_tensor = None
         if self.cls_class_weights is not None:
@@ -946,8 +947,8 @@ class CombinedLoss(nn.Module):
             rt_loss = torch.tensor(0.0, device=logits.device)
 
         if (self.lambda_feat_distill > 0 and mode == 'mil_train_phase2'
-                and z_e is not None and z_e_frozen is not None):
-            fd_loss = feature_distillation_loss(z_e, z_e_frozen, mask)
+                and distill_feat is not None and z_e_frozen is not None):
+            fd_loss = feature_distillation_loss(distill_feat, z_e_frozen, mask)
         else:
             fd_loss = torch.tensor(0.0, device=logits.device)
 

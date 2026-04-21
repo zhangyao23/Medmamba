@@ -18,7 +18,11 @@ from tqdm import tqdm
 
 from src.training import Config, attach_log_file_handler, configure_runtime_paths, resolve_relative_path
 from src.models.feature_extractor_3d import VolumetricFeatureExtractor
-from src.models.spatial_scanner_3d import ZOrderSpatialScanner
+from src.models.spatial_scanner_3d import (
+    ZOrderSpatialScanner,
+    reorder_sequence,
+    restore_sequence_order,
+)
 from src.models.video_mamba import VideoMamba3D
 from src.data.volumetric_loader import create_volumetric_dataloader
 from src.utils.metrics import evaluate_bag_level
@@ -57,12 +61,9 @@ class FullSupSegModel(nn.Module):
     def forward(self, patches, coords, masks=None, mini_batch_size=8):
         features = self.feature_extractor(patches, mini_batch_size=mini_batch_size)
         sorted_features, sorted_coords, sort_perm = self.spatial_scanner(features, coords)
-        context = self.mamba(sorted_features, mask=masks)
-        inv_perm = sort_perm.argsort(dim=1)
-        B, N, D = context.shape
-        context_orig = torch.gather(
-            context, 1, inv_perm.unsqueeze(-1).expand(B, N, D)
-        )
+        sorted_masks = reorder_sequence(masks, sort_perm)
+        context = self.mamba(sorted_features, mask=sorted_masks)
+        context_orig = restore_sequence_order(context, sort_perm)
         seg_logits = self.seg_head(context_orig).squeeze(-1)
         return seg_logits
 
