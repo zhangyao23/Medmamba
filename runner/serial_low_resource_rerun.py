@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Any
 
 
-HOST_PRIORITY = ["8-228", "8-232", "8-238", "8-240"]
+HOST_PRIORITY = ["8-228", "8-232", "8-238", "8-240", "8-243"]
 
 
 @dataclass

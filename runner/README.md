@@ -25,7 +25,7 @@
   - 把运行元数据和状态写到对应 run 的 `logs/`
 - `serial_low_resource_rerun.py`
   - 本地调度脚本
-  - 会在 `8-228 / 8-232 / 8-238 / 8-240` 之间挑选可用机器
+  - 会在 `8-228 / 8-232 / 8-238 / 8-240 / 8-243` 之间挑选可用机器
   - 按“先 smoke 再 full、实验严格串行”的顺序启动 `fullsup_seg`、`v20_retrain`、`v20_mamba_first_weak`
 - `start_low_resource_serial_rerun.ps1`
   - Windows 侧后台包装脚本
