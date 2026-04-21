@@ -3,7 +3,8 @@ $ErrorActionPreference = 'Stop'
 $RepoRoot = Split-Path -Parent $PSScriptRoot
 $RuntimeRoot = Join-Path $RepoRoot '.runtime\low_resource_rerun'
 $Timestamp = Get-Date -Format 'yyyyMMdd_HHmmss'
-$LogPath = Join-Path $RuntimeRoot "rerun_$Timestamp.log"
+$StdoutLogPath = Join-Path $RuntimeRoot "rerun_$Timestamp.out.log"
+$StderrLogPath = Join-Path $RuntimeRoot "rerun_$Timestamp.err.log"
 
 New-Item -ItemType Directory -Force -Path $RuntimeRoot | Out-Null
 
@@ -49,10 +50,12 @@ $Args += @($ScriptPath)
 $Process = Start-Process -FilePath $PythonBin `
     -ArgumentList $Args `
     -WorkingDirectory $RepoRoot `
-    -RedirectStandardOutput $LogPath `
-    -RedirectStandardError $LogPath `
+    -WindowStyle Hidden `
+    -RedirectStandardOutput $StdoutLogPath `
+    -RedirectStandardError $StderrLogPath `
     -PassThru
 
 Write-Output "Started low-resource rerun orchestrator."
 Write-Output "PID: $($Process.Id)"
-Write-Output "Log: $LogPath"
+Write-Output "Stdout log: $StdoutLogPath"
+Write-Output "Stderr log: $StderrLogPath"

@@ -36,7 +36,20 @@ def run_subprocess(command: list[str], *, timeout: int | None = None) -> subproc
 
 
 def run_ssh(host: str, script: str, *, timeout: int | None = None) -> subprocess.CompletedProcess[str]:
-    return run_subprocess(["ssh", host, f"bash -lc {json.dumps(script)}"], timeout=timeout)
+    normalized_script = script.replace("\r\n", "\n").replace("\r", "\n")
+    raw_result = subprocess.run(
+        ["ssh", host, "bash", "-s"],
+        input=normalized_script.encode("utf-8"),
+        check=False,
+        capture_output=True,
+        timeout=timeout,
+    )
+    return subprocess.CompletedProcess(
+        raw_result.args,
+        raw_result.returncode,
+        raw_result.stdout.decode("utf-8", errors="replace"),
+        raw_result.stderr.decode("utf-8", errors="replace"),
+    )
 
 
 def local_git_output(repo_root: Path, *args: str) -> str:
@@ -65,11 +78,9 @@ mkdir -p "$(dirname "$RUNNER_ROOT")" "$ARTIFACT_ROOT"
 if [[ ! -d "$RUNNER_ROOT/.git" ]]; then
   git clone "$REMOTE_URL" "$RUNNER_ROOT"
 fi
-export GIT_REMOTE_URL="$REMOTE_URL"
-export RUNNER_ROOT="$RUNNER_ROOT"
-export ARTIFACT_ROOT="$ARTIFACT_ROOT"
-export BRANCH="$BRANCH"
-bash "$RUNNER_ROOT/runner/bootstrap_remote_runner.sh"
+git -c safe.directory="$RUNNER_ROOT" -C "$RUNNER_ROOT" fetch origin
+git -c safe.directory="$RUNNER_ROOT" -C "$RUNNER_ROOT" checkout "$BRANCH"
+git -c safe.directory="$RUNNER_ROOT" -C "$RUNNER_ROOT" pull --ff-only origin "$BRANCH"
 git -c safe.directory="$RUNNER_ROOT" -C "$RUNNER_ROOT" rev-parse HEAD
 """
     result = run_ssh(host, script, timeout=300)
